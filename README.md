@@ -208,25 +208,3 @@ drowsiness_detection/
 | Head Pose | ✓ (Face position) | ✓✓ (3D estimation) |
 | Accuracy | ~85% | ~95% |
 
-## Contributing
-
-We welcome contributions focused on:
-- Improved facial landmark detection algorithms
-- Better eye closure detection methods
-- Enhanced yawn detection techniques
-- More accurate head pose estimation
-- Cross-platform compatibility
-
-## License
-
-This project is for educational and research purposes. Please ensure compliance with local regulations when using for:
-- Driver monitoring applications
-- Workplace safety systems
-- Medical/clinical applications
-
-## Acknowledgments
-
-- OpenCV team for computer vision libraries
-- dlib library for facial landmark detection
-- Academic research papers on drowsiness detection
-- Open source community for various algorithms and techniques 
