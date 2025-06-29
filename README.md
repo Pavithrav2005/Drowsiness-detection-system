@@ -150,50 +150,13 @@ Where p0-p10 are mouth landmark points.
 - **YAWN_THRESH**: 20 (mouth aspect ratio threshold)
 - **Head pose angles**: ±30° yaw, ±20° pitch for alert
 
-## Troubleshooting
-
-### Common Issues
-
-1. **"dlib not available" message:**
-   - This is normal! The system will use fallback mode
-   - For enhanced accuracy, install dlib using methods above
-   - The system works perfectly without dlib
-
-2. **"Could not load dlib shape predictor" error:**
-   - Run `python setup_models.py` to download the model
-   - Or manually download from: http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
-   - Extract and place `shape_predictor_68_face_landmarks.dat` in project directory
-
-3. **Camera not detected:**
-   - Check if other applications are using the camera
-   - Try changing camera index in code: `cv2.VideoCapture(1)` instead of `cv2.VideoCapture(0)`
-   - Ensure camera permissions are granted
-
-4. **Poor detection accuracy:**
-   - Ensure good lighting conditions
-   - Position camera at eye level
-   - Remove glasses if possible (or use enhanced mode with dlib)
-   - Recalibrate using 'c' key (enhanced mode only)
-
-5. **High false positive rate:**
-   - Increase `EYE_AR_CONSEC_FRAMES` value in code
-   - Ensure stable camera mounting
-   - Use enhanced mode with dlib for better accuracy
-
-6. **Audio alerts not working:**
-   - Check system volume
-   - Ensure no other audio applications are blocking sound
-   - Windows Defender might block winsound - add exception
-
 ## Project Structure
 
 ```
 drowsiness_detection/
 ├── simple_drowsiness_detector.py    # Main detection script
 ├── requirements.txt                 # Python dependencies
-├── requirements_windows.txt         # Windows-specific requirements
 ├── setup_models.py                 # Model download script
-├── enhanced_setup.py              # Comprehensive setup script
 ├── README.md                       # This file
 └── shape_predictor_68_face_landmarks.dat  # dlib model (downloaded)
 ```
